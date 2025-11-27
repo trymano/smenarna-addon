@@ -1,0 +1,1 @@
+# smenarna-addon
