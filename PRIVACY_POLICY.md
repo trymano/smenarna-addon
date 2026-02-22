@@ -28,10 +28,14 @@ All data processing occurs locally within your Google Sheets document. The Add-o
 
 ## Permissions
 
-The Add-on may request access to your Google Sheets to provide its functionality. These permissions are used exclusively to:
-- Read and modify data within the active spreadsheet
-- Display user interface elements
-- Execute spreadsheet operations as requested by you
+The Add-on requests minimal permissions to function:
+
+- **Current Spreadsheet Access** (`spreadsheets.currentonly`) - Read and modify only the spreadsheet where the add-on is installed. Required to manage currency exchange orders, update balances, and generate reports.
+- **User Interface** (`script.container.ui`) - Display cards and interactive elements within the add-on sidebar. Required to show the buy/sell forms, balance calculator, and settings.
+- **Locale Information** (`script.locale`) - Detect your language and regional settings for proper date/number formatting.
+- **Email Address** (`userinfo.email`) - Retrieve your email address to record who submitted each order in the spreadsheet for audit trail purposes only.
+
+These permissions are used exclusively to provide the add-on's functionality and are limited to the minimum necessary scope.
 
 ## Third-Party Services
 
